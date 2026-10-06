@@ -1,1 +1,26 @@
-<p>home works!</p>
+<div class="home-container">
+  <header class="header">
+    <h1>שם האתר שלך</h1>
+    <nav>
+      <ul>
+        <li><a href="#">דף הבית</a></li>
+        <li><a href="#">אודות</a></li>
+        <li><a href="#">שירותים</a></li>
+        <li><a href="#">צרו קשר</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>ברוכים הבאים!</h2>
+    <p>זהו הדף הבית שלך. כאן תוכל להציג מידע חשוב.</p>
+    <div class="button-container">
+      <button class="button" (click)="sendEmail()">שלח מייל</button>
+      <button class="button" (click)="navigateToContact()">מעבר לדף קשר</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2023 כל הזכויות שמורות.</p>
+  </footer>
+</div>

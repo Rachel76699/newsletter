@@ -1,0 +1,76 @@
+:host {
+  display: block;
+  background-color: #f4f4f4; // רקע בהיר
+  color: #333; // טקסט כהה
+  font-family: 'Arial', sans-serif; // פונט מודרני
+  margin: 0;
+  padding: 0;
+}
+
+.home-container {
+  text-align: center;
+}
+
+.header {
+  background-color: #6B8E23; // ירוק זית
+  color: #FFD700; // זהב
+  padding: 20px 0;
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: inline;
+      margin: 0 15px;
+
+      a {
+        color: #FFD700; // זהב
+        text-decoration: none;
+        font-weight: bold;
+        
+        &:hover {
+          text-decoration: underline; // קו תחתון בריחוף
+        }
+      }
+    }
+  }
+}
+
+main {
+  padding: 50px 20px;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 20px 0;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.button {
+  background-color: #FFD700; // צבע זהב
+  color: #6B8E23; // טקסט ירוק זית
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #FFC700; // גוון זהב בהיר יותר בעת ריחוף
+  }
+}
+
+.footer {
+  background-color: #6B8E23; // ירוק זית
+  color: #FFD700; // זהב
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

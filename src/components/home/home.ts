@@ -6,4 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './home.scss',
   templateUrl: './home.html',
 })
-export class Home {}
+export class HomeComponent {
+  sendEmail() {
+    // כאן תוכל להוסיף את הלוגיקה לשליחת מייל
+    alert('מייל נשלח!');
+  }
+
+  navigateToContact() {
+    // כאן תוכל להוסיף את הלוגיקה למעבר לדף קשר
+    alert('מעבר לדף קשר!');
+  }
+}
