@@ -1,0 +1,31 @@
+.contact-card {
+  background-color: #ffffff; /* צבע רקע לבן */
+  border: 2px solid #4CAF50; /* גבול ירוק */
+  padding: 20px; /* ריפוד */
+  margin: 15px; /* רווחים מסביב */
+  border-radius: 10px; /* פינות מעוגלות */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* צל כתוצאה מעומק */
+  text-align: center; /* טקסט ממורכז */
+  transition: transform 0.3s, box-shadow 0.3s; /* אנימציה לשינוי */
+  
+  &:hover {
+    transform: translateY(-5px); /* הזזה קלה בעת ריחוף */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* הצל עוצמתי יותר בעת ריחוף */
+  }
+}
+
+.contact-card h2 {
+  color: #4CAF50; /* צבע כותרת ירוק */
+  margin-bottom: 10px; /* רווח מתחת לכותרת */
+  font-size: 2em; /* גודל טקסט לכותרת */
+}
+
+.contact-card p {
+  color: #333; /* צבע טקסט לפסקה */
+  font-size: 1.2em; /* גודל טקסט לפסקה */
+}
+
+.contact-card .email {
+  color: #2196F3; /* צבע כחול לכתובת דואר אלקטרוני */
+  text-decoration: underline; /* קו תחתון לכתובת דואר אלקטרוני */
+}
