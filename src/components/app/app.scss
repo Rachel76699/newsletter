@@ -1,0 +1,63 @@
+body {
+  margin: auto;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: gold;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: gold;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  color: black;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.button {
+  background-color: gold;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 20px;
+}
+
+.button:hover {
+  background-color: darkgoldenrod;
+}
+
+.footer {
+  background-color: gold;
+  padding: 10px;
+  text-align: center;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+
+}
+
+.footer p {
+  margin: 0;
+  color: black;
+}
