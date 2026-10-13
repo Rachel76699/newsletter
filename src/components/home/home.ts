@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './home.scss',
   templateUrl: './home.html',
 })
-export class HomeComponent {
+export class Home {
   sendEmail() {
     // כאן תוכל להוסיף את הלוגיקה לשליחת מייל
     alert('מייל נשלח!');

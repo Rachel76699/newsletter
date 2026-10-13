@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './recipe.scss',
   templateUrl: './recipe.html',
 })
-export class Recipe {}
+export class Recipe {
+  name: string = 'name';
+  numOfProducts: number = 0;
+  products: string[] = [];
+  
+
+}
