@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ContactInterface } from '../../interfaces/contactInterface';
 
 @Component({
   imports: [],
@@ -7,6 +8,17 @@ import { Component } from '@angular/core';
   templateUrl: './contact.html',
 })
 export class Contact {
-  name: string = 'name';
-  email: string = 'email';
+  @Input() contact!: ContactInterface
+  @Output() editContactEvent = new EventEmitter<ContactInterface>();
+  @Output() deleteContactEvent = new EventEmitter<number>();
+  isEditing: boolean = false;
+
+  editContact() {
+    this.isEditing = false;
+    this.editContactEvent.emit(this.contact);
+  }
+
+  deleteContact() {
+    this.deleteContactEvent.emit(this.contact.id);
+  }
 }

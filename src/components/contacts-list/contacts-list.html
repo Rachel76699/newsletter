@@ -1,0 +1,12 @@
+<div class="contacts-container">
+  <h2>contacts</h2>
+  <div class="contact-grid">
+    @for(contact of contactList; track contact.name) {
+      <app-contact 
+        [contact]="contact"
+        (editContactEvent)="onEditContact($event)"
+        (deleteContactEvent)="onDeleteContact($event)">
+      </app-contact>
+    }
+  </div>
+</div>

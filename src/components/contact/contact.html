@@ -1,4 +1,14 @@
 <div class="contact-card">
-  <h2>{{ name }}</h2>
-  <p>Email: {{ email }}</p>
+  <h2>{{ contact.name }}</h2>
+  <p>Email: {{ contact.email }}</p>
+  <button (click)="isEditing=true">Edit</button>
+  <button (click)="deleteContact()">Delete</button>
+
+  <!-- @if(isEditing) {  
+    <form>
+      <input type="text" name="name" [(ngModel)]="contact.name" placeholder="Name">
+      <input type="email" name="email" [(ngModel)]="contact.email" placeholder="Email">
+      <button (click)="editContact()">Save</button>
+    </form>
+  } -->
 </div>
