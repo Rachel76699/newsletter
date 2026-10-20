@@ -15,22 +15,22 @@ export class ContactsList {
     {
       id: 1,
       name: 'John Doe',
-      email: ''
+      email: 'John@example.com'
     },
     {
       id: 2,
       name: 'Jane Smith',
-      email: ''
+      email: 'Jane@example.com'
     },
     {
       id: 3,
       name: 'Alice Johnson',
-      email: ''
+      email: 'Alice@example.com'
     },
     {
       id: 4,
       name: 'Bob Williams',
-      email: ''
+      email: 'Bob@example.com '
     }
   ]
 

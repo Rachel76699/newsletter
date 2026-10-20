@@ -1,63 +1,89 @@
-body {
-  margin: auto;
-  font-family: Arial, sans-serif;
-  background-color: black;
-  color: gold;
+:root {
+  --ivory: #fdf7f2;
+  --cream: #f5efe8;
+  --rose: #f4d7dd;
+  --rose-deep: #dca6b4;
+  --gold: #d9b36a;
+  --gold-deep: #b88a3d;
+  --charcoal: #2b1f24;
+  --text: #4f3e42;
+  --soft-white: #fffaf7;
 }
-
-.home-container {
+:host {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(244, 215, 221, 0.7), transparent 28%),
+    linear-gradient(180deg, var(--ivory) 0%, var(--cream) 100%);
+  color: var(--charcoal);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .header {
-  background-color: gold;
-  padding: 20px;
-  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 4vw;
+  background: rgba(255, 250, 247, 0.82);
+  border-bottom: 1px solid rgba(184, 138, 61, 0.25);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(91, 62, 62, 0.08);
 }
 
-h1 {
+.header h1 {
   margin: 0;
-  color: black;
-}
-
-main {
-  flex: 1;
-  padding: 20px;
-  text-align: center;
+  font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  color: var(--charcoal);
 }
 
 .button-container {
-  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
 }
 
 .button {
-  background-color: gold;
-  color: black;
-  border: none;
-  padding: 10px 20px;
-  text-transform: uppercase;
+  border: 1px solid rgba(184, 138, 61, 0.35);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f4d7dd 0%, #e7c7a5 100%);
+  color: var(--charcoal);
+  font-weight: 700;
+  padding: 0.82rem 1.3rem;
   cursor: pointer;
-  transition: background-color 0.3s;
-  margin: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 18px rgba(184, 138, 61, 0.15);
 }
 
 .button:hover {
-  background-color: darkgoldenrod;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 25px rgba(184, 138, 61, 0.22);
+}
+
+router-outlet {
+  display: block;
+  flex: 1;
+  padding: 2rem 1rem 3rem;
 }
 
 .footer {
-  background-color: gold;
-  padding: 10px;
-  text-align: center;
+  position: sticky;
   bottom: 0;
-  position: absolute;
-  width: 100%;
-
+  background: linear-gradient(180deg, rgba(43, 31, 36, 0.96), rgba(61, 45, 50, 0.96));
+  color: rgba(255, 250, 247, 0.82);
+  padding: 1rem 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(217, 179, 106, 0.28);
+  box-shadow: 0 -10px 26px rgba(43, 31, 36, 0.12);
 }
 
 .footer p {
   margin: 0;
-  color: black;
+  font-size: 0.92rem;
+  letter-spacing: 0.03em;
 }

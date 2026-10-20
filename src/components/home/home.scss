@@ -1,6 +1,101 @@
+:host {
+  --cream: #fffaf4;
+  --blush: #f3dfe1;
+  --rose: #b97982;
+  --gold: #b88d52;
+  --ink: #49363a;
+  --muted: #806d6d;
+
+  display: block;
+  color: var(--ink);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.home-container {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  min-height: 65vh;
+  overflow: hidden;
+  padding: clamp(2rem, 7vw, 5rem) 1.25rem;
+  background:
+    radial-gradient(ellipse at 12% 18%, rgba(243, 223, 225, 0.9), transparent 35%),
+    radial-gradient(ellipse at 88% 82%, rgba(224, 198, 160, 0.38), transparent 34%),
+    linear-gradient(145deg, #fffaf4 0%, #f8eee8 52%, #f4e5e4 100%);
+}
+
+.home-container::before,
+.home-container::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  border: 1px solid rgba(184, 141, 82, 0.22);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.home-container::before {
+  width: 22rem;
+  height: 22rem;
+  top: -12rem;
+  right: -5rem;
+}
+
+.home-container::after {
+  width: 16rem;
+  height: 16rem;
+  bottom: -10rem;
+  left: -3rem;
+}
 
 main {
-  flex: 1;
-  padding: 20px;
+  width: min(100%, 760px);
+  padding: clamp(2rem, 6vw, 4.5rem);
   text-align: center;
+  background: rgba(255, 252, 248, 0.82);
+  border: 1px solid rgba(184, 141, 82, 0.3);
+  border-radius: 28px;
+  box-shadow:
+    0 24px 65px rgba(91, 63, 62, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+}
+
+main h2 {
+  margin: 0 0 1rem;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+main h2::after {
+  display: block;
+  width: 64px;
+  height: 2px;
+  margin: 1.25rem auto 0;
+  content: "";
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+main p {
+  max-width: 540px;
+  margin: 1.25rem auto 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .home-container {
+    min-height: 55vh;
+    padding: 2rem 1rem;
+  }
+
+  main {
+    border-radius: 22px;
+  }
 }

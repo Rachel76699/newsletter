@@ -1,0 +1,48 @@
+<p>send-email works!</p>
+<button (click)="selectRecipe()">recipe</button>
+<button (click)="selectTip()">tip</button>
+<button (click)="selectAdvertising()">advertising</button>
+
+@if(isRecipeSelected){
+    <form>
+        <h2>Recipe</h2>
+        <input type="text" id="recipe" name="recipe" placeholder="Name of the recipe">
+        <input type="text" id="recipe" name="description" placeholder="Description of the recipe">
+        <input type="text" id="recipe" name="category" placeholder="Category of the recipe">
+        <input type="text" id="recipe" name="author" placeholder="Author of the recipe">
+        <input type="text" id="recipe" name="prepTime" placeholder="Preparation time of the recipe">
+        <input type="text" id="recipe" name="ingredients" placeholder="Ingredients of the recipe">
+        <input type="text" id="recipe" name="instructions" placeholder="Instructions of the recipe">
+        <input
+            type="file"
+            id="recipe-image"
+            name="image"
+            accept="image/*"
+            (change)="onImageSelected($event)"
+>
+        <button type="submit">Send Recipe</button>
+    </form>
+}
+@if(isTipSelected){
+    <form>
+        <h2>Tip</h2>
+        <input type="text" id="tip" name="tip" placeholder="Insert tip">
+        <button type="submit">Send Tip</button>
+    </form>
+}
+@if(isAdvertisingSelected){
+    <form>
+        <h2>Advertising</h2>
+        <input type="text" id="advertising" name="advertising" placeholder="Insert advertising">
+        <input
+            type="file"
+            id="advertising-image"
+            name="image"
+            accept="image/*"
+            (change)="onImageSelected($event)"
+        >
+        <button type="submit">Send Advertising</button>
+    </form>
+    
+}
+
