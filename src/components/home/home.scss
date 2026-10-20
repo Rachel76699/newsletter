@@ -1,76 +1,59 @@
-:host {
-  display: block;
-  background-color: #f4f4f4; // רקע בהיר
-  color: #333; // טקסט כהה
-  font-family: 'Arial', sans-serif; // פונט מודרני
-  margin: 0;
-  padding: 0;
+body {
+  margin: auto;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: gold;
 }
 
 .home-container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .header {
-  background-color: #6B8E23; // ירוק זית
-  color: #FFD700; // זהב
-  padding: 20px 0;
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
+  background-color: gold;
+  padding: 20px;
+  text-align: center;
+}
 
-    li {
-      display: inline;
-      margin: 0 15px;
-
-      a {
-        color: #FFD700; // זהב
-        text-decoration: none;
-        font-weight: bold;
-        
-        &:hover {
-          text-decoration: underline; // קו תחתון בריחוף
-        }
-      }
-    }
-  }
+h1 {
+  margin: 0;
+  color: black;
 }
 
 main {
-  padding: 50px 20px;
+  flex: 1;
+  padding: 20px;
+  text-align: center;
 }
 
-h2 {
-  font-size: 2em;
-  margin: 20px 0;
-}
-
-p {
-  font-size: 1.2em;
-  margin: 10px 0;
+.button-container {
+  margin-top: 20px;
 }
 
 .button {
-  background-color: #FFD700; // צבע זהב
-  color: #6B8E23; // טקסט ירוק זית
+  background-color: gold;
+  color: black;
   border: none;
   padding: 10px 20px;
-  font-size: 1em;
-  border-radius: 5px;
+  text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin: 20px;
+}
 
-  &:hover {
-    background-color: #FFC700; // גוון זהב בהיר יותר בעת ריחוף
-  }
+.button:hover {
+  background-color: darkgoldenrod;
 }
 
 .footer {
-  background-color: #6B8E23; // ירוק זית
-  color: #FFD700; // זהב
-  padding: 10px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  background-color: gold;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  color: black;
 }
