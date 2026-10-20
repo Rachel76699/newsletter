@@ -1,0 +1,79 @@
+:host {
+  display: block;
+  height: 100%;
+  min-height: 0;
+}
+
+.contacts-container {
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  overflow: hidden;
+  padding: clamp(1rem, 3vh, 2rem) clamp(1rem, 4vw, 3.5rem);
+  color: #49363a;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background:
+    radial-gradient(ellipse at 12% 18%, rgba(243, 223, 225, 0.9), transparent 35%),
+    radial-gradient(ellipse at 88% 82%, rgba(224, 198, 160, 0.4), transparent 34%),
+    linear-gradient(145deg, #fffaf4 0%, #f8eee8 52%, #f4e5e4 100%);
+}
+
+.contacts-container::before,
+.contacts-container::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  border: 1px solid rgba(184, 141, 82, 0.22);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.contacts-container::before {
+  width: 22rem;
+  height: 22rem;
+  top: -12rem;
+  right: -5rem;
+}
+
+.contacts-container::after {
+  width: 16rem;
+  height: 16rem;
+  bottom: -10rem;
+  left: -3rem;
+}
+
+.contacts-container > h2 {
+  margin: 0 0 clamp(1rem, 3vh, 2rem);
+  text-align: center;
+  color: #49363a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 4vh, 2.8rem);
+  font-weight: 500;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .contacts-container {
+    justify-content: flex-start;
+    padding: 1.25rem 1rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
