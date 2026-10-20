@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { Contact } from '../contact/contact';
 import { ContactsList } from '../contacts-list/contacts-list';
 import { Home } from '../home/home';
@@ -8,7 +8,7 @@ import { Home } from '../home/home';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ContactsList, Contact, Home],
+  imports: [RouterOutlet, RouterLink, ContactsList, Contact, Home],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

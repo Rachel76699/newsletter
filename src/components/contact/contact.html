@@ -4,11 +4,11 @@
   <button (click)="isEditing=true">Edit</button>
   <button (click)="deleteContact()">Delete</button>
 
-  <!-- @if(isEditing) {  
-    <form>
-      <input type="text" name="name" [(ngModel)]="contact.name" placeholder="Name">
-      <input type="email" name="email" [(ngModel)]="contact.email" placeholder="Email">
-      <button (click)="editContact()">Save</button>
+  @if(isEditing) {  
+    <form [formGroup]="contactForm">
+      <input type="text" name="name" formControlName="name" placeholder="Name">
+      <input type="email" name="email" formControlName="email" placeholder="Email">
+      <button type="submit" [disabled]="contactForm.invalid" (click)="editContact()">Save</button>
     </form>
-  } -->
+  }
 </div>

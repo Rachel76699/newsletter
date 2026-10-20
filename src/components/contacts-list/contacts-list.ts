@@ -35,11 +35,18 @@ export class ContactsList {
   ]
 
   onDeleteContact(contactId: number) {
-    this.contactList = this.contactList.filter(contact => contact.id !== contactId);
+    //todo: delete contact from the server
+    // this.contactList = this.contactList.filter(contact => contact.id !== contactId);
   }
 
   onEditContact(contact: ContactInterface) {
-    // Handle contact edit logic here
+    //todo: update contact on the server
+    // this.contactList = this.contactList.map(c => {
+    //   if (c.id === contact.id) {
+    //     return { ...c, name: contact.name, email: contact.email };
+    //   }
+    //   return c;
+    //   })
   }
 
 }

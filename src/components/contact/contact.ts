@@ -1,8 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ContactInterface } from '../../interfaces/contactInterface';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  imports: [],
+  imports: [ReactiveFormsModule],
   selector: 'app-contact',
   styleUrl: './contact.scss',
   templateUrl: './contact.html',
@@ -21,4 +23,9 @@ export class Contact {
   deleteContact() {
     this.deleteContactEvent.emit(this.contact.id);
   }
+
+  contactForm=new FormGroup({
+    name:new FormControl('',Validators.required),
+    email:new FormControl('',[Validators.required,Validators.email])
+  })
 }
