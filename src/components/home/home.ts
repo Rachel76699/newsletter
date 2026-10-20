@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   imports: [],
@@ -7,13 +8,14 @@ import { Component } from '@angular/core';
   templateUrl: './home.html',
 })
 export class Home {
+  constructor(private router: Router) {}
   sendEmail() {
-    // כאן תוכל להוסיף את הלוגיקה לשליחת מייל
-    alert('מייל נשלח!');
+    this.router.navigate(['/recipe']);
+    // alert('Email Sent!');
   }
 
   navigateToContact() {
-    // כאן תוכל להוסיף את הלוגיקה למעבר לדף קשר
-    alert('מעבר לדף קשר!');
+    this.router.navigate(['/contact']);
+    // alert('Navigating to Contact Page!');
   }
 }

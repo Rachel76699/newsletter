@@ -14,4 +14,14 @@ import { Home } from '../home/home';
 })
 export class App {
   
+  //   constructor(private router: Router) {}
+  // sendEmail() {
+  //   this.router.navigate(['/recipe']);
+  //   // alert('Email Sent!');
+  // }
+
+  // navigateToContact() {
+  //   this.router.navigate(['/contact']);
+  //   // alert('Navigating to Contact Page!');
+  // }
 }
